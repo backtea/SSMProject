@@ -98,7 +98,7 @@
                             手机号码
                         </label>
                         <div class="col-sm-8">
-                            <label style="width: 250px;" class="form-control">${(userinfo.phoneNumber)!''}</label>
+                            <label style="width: 250px;" class="form-control">${(userinfo.phonenumber)!''}</label>
                         </div>
                     </div>
 
