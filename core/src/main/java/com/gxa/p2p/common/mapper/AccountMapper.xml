@@ -56,7 +56,7 @@
     usableAmount, freezedAmount, borrowLimit,unReceiveInterest,unReceivePrincipal,unReturnAmount
    </sql>
 
-  <select id="getMsg" resultMap="BaseResultMap">
+  <select id="getMoneyMsg" resultMap="BaseResultMap">
     select
     <include refid="base_column"/>
     from `account`

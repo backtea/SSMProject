@@ -108,11 +108,6 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
         if (loginInfo!=null) {
             /* 将登录用户的数据，通过UserContext工具类，存放至session*/
             UserContext.putLoginInfo(loginInfo);
-            /*Account account = accountMapper.getMsg(loginInfo.getId());
-            UserContext.putAccount(account);*/
-            /*Userinfo userinfo=userinfoMapper.selectById(loginInfo.getId());
-            UserContext.putUserinfo(userinfo);
-            System.out.println(userinfo.getPhonenumber());*/
 
         } else {
         }

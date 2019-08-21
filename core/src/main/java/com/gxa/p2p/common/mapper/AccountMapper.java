@@ -16,5 +16,5 @@ public interface AccountMapper {
 
     int updateByPrimaryKey(Account record);
 
-    Account getMsg(@Param("id") Long id);
+    Account getMoneyMsg(@Param("id") Long id);
 }

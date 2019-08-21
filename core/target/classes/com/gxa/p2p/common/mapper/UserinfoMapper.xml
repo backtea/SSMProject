@@ -23,14 +23,14 @@
   </delete>
   <insert id="insert" parameterType="com.gxa.p2p.common.domain.Userinfo" useGeneratedKeys="true" keyProperty="id" >
     insert into `userinfo` (id,version, bitState, realName,
-      idNumber, phoneNumber, incomeGrade_id, 
-      marriage_id, kidCount_id, educationBackground_id, 
-      authScore, houseCondition_id, realauthid, 
+      idNumber, phoneNumber, incomeGrade_id,
+      marriage_id, kidCount_id, educationBackground_id,
+      authScore, houseCondition_id, realauthid,
       email)
     values (#{id,jdbcType=BIGINT},#{version,jdbcType=INTEGER}, #{bitstate,jdbcType=BIGINT}, #{realname,jdbcType=VARCHAR},
-      #{idnumber,jdbcType=VARCHAR}, #{phonenumber,jdbcType=VARCHAR}, #{incomegradeId,jdbcType=BIGINT}, 
-      #{marriageId,jdbcType=BIGINT}, #{kidcountId,jdbcType=BIGINT}, #{educationbackgroundId,jdbcType=BIGINT}, 
-      #{authscore,jdbcType=INTEGER}, #{houseconditionId,jdbcType=BIGINT}, #{realauthid,jdbcType=BIGINT}, 
+      #{idnumber,jdbcType=VARCHAR}, #{phonenumber,jdbcType=VARCHAR}, #{incomegradeId,jdbcType=BIGINT},
+      #{marriageId,jdbcType=BIGINT}, #{kidcountId,jdbcType=BIGINT}, #{educationbackgroundId,jdbcType=BIGINT},
+      #{authscore,jdbcType=INTEGER}, #{houseconditionId,jdbcType=BIGINT}, #{realauthid,jdbcType=BIGINT},
       #{email,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.gxa.p2p.common.domain.Userinfo" >
@@ -51,13 +51,13 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select id, version, bitState, realName, idNumber, phoneNumber, incomeGrade_id, marriage_id, 
+    select id, version, bitState, realName, idNumber, phoneNumber, incomeGrade_id, marriage_id,
     kidCount_id, educationBackground_id, authScore, houseCondition_id, realauthid, email
     from `userinfo`
     where id = #{id,jdbcType=BIGINT}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select id, version, bitState, realName, idNumber, phoneNumber, incomeGrade_id, marriage_id, 
+    select id, version, bitState, realName, idNumber, phoneNumber, incomeGrade_id, marriage_id,
     kidCount_id, educationBackground_id, authScore, houseCondition_id, realauthid, email
     from `userinfo`
   </select>

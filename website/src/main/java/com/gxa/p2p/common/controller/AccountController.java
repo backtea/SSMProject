@@ -20,8 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AccountController {
 
-//	@Autowired
-//	private IAccountService iAccountService;
     @Autowired
     private AccountMapper accountMapper;
 
@@ -35,8 +33,7 @@ public class AccountController {
         Logininfo loginInfo = UserContext.getLoginInfo();
         model.addAttribute("logininfo", loginInfo);
 
-        Account account= accountMapper.getMsg(loginInfo.getId());
-        /*Account account = UserContext.getAccount();*/
+        Account account= accountMapper.getMoneyMsg(loginInfo.getId());
         model.addAttribute("account", account);
 
         return "personal";
@@ -47,7 +44,6 @@ public class AccountController {
 		Logininfo loginInfo = UserContext.getLoginInfo();
 		model.addAttribute("logininfo",loginInfo);
         Userinfo userinfo=userinfoMapper.selectById(loginInfo.getId());
-//        System.out.println(userinfo.getPhonenumber());
         model.addAttribute("userinfo",userinfo);
 
 

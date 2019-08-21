@@ -9,20 +9,28 @@ public class Account {
 
     private String tradepassword;
 
+//    可用资金   2
     private BigDecimal usableamount = SysConstant.ZERO;
 
+//    冻结资金   3
     private BigDecimal freezedamount= SysConstant.ZERO;
 
+//最大额度
     private BigDecimal borrowlimit= SysConstant.ZERO;
 
+//版本
     private Integer version=1;
 
+//待收利息    4
     private BigDecimal unreceiveinterest= SysConstant.ZERO;
 
+//待收本金  5
     private BigDecimal unreceiveprincipal= SysConstant.ZERO;
 
+//待还本息    6
     private BigDecimal unreturnamount= SysConstant.ZERO;
 
+//剩余额度
     private BigDecimal remainborrowlimit= SysConstant.ZERO;
 
     public Long getId() {

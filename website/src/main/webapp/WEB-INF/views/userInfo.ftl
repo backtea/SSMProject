@@ -113,9 +113,9 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            <script type="text/javascript">
+                            &lt;#&ndash;<script type="text/javascript">
                                 $("#educationbackgroundItem option[value=${(userinfo.educationbackgroundItem.id)!-1}]").attr("selected", true);
-                            </script>
+                            </script>&ndash;&gt;
                         </div>
                     </div>-->
 

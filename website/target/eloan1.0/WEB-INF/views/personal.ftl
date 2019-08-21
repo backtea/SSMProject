@@ -48,13 +48,13 @@
 
 							<div class="row h4 account-info">
 								<div class="col-sm-4">
-									账户总额：<span class="text-primary">${account.usableamount}元</span>
+									账户总额：<span class="text-primary">${account.usableamount+account.freezedamount+account.unreceiveprincipal}元</span>
 								</div>
 								<div class="col-sm-4">
-									可用金额：<span class="text-primary">${account.freezedamount}元</span>
+									可用金额：<span class="text-primary">${account.usableamount}元</span>
 								</div>
 								<div class="col-sm-4">
-									冻结金额：<span class="text-primary">${account.borrowlimit}元</span>
+									冻结金额：<span class="text-primary">${account.freezedamount}元</span>
 								</div>
 							</div>
 

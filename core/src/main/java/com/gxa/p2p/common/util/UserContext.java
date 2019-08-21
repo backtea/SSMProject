@@ -41,21 +41,5 @@ public class UserContext {
         return (Logininfo) getSession().getAttribute(USER_IN_SESSION);
     }
 
-    /*public static void putAccount(Account account) {
-        getSession().setAttribute(ACCOUNT_IN_SESSION, account);
-    }
-
-    public static Account getAccount() {
-        return (Account) getSession().getAttribute(ACCOUNT_IN_SESSION);
-    }
-
-    public static void putUserinfo(Userinfo userinfo) {
-        getSession().setAttribute(USERINFO_IN_SESSION, userinfo);
-    }
-
-    public static Userinfo getUserinfo() {
-        return (Userinfo) getSession().getAttribute(USERINFO_IN_SESSION);
-    }*/
-
 
 }
