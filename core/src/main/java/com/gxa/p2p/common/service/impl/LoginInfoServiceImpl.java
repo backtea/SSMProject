@@ -5,6 +5,7 @@ import com.gxa.p2p.common.domain.Logininfo;
 import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.mapper.LogininfoMapper;
+import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.IAccountService;
 import com.gxa.p2p.common.service.ILoginInfoService;
 import com.gxa.p2p.common.service.IUserInfoService;
@@ -28,6 +29,9 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
 
     @Autowired
     private AccountMapper accountMapper;
+
+    @Autowired
+    private UserinfoMapper userinfoMapper;
 
     /**
      * 检查用户名是否已存在
@@ -90,44 +94,6 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
     }
 
     /**
-     *
-     * 用户登录
-     *
-     * */
-//    @Override
-//    public void login(String username, String password){
-//
-////        Logininfo logininfo=logininfoMapper.login(username,password,usertype);
-//
-//
-//
-//        /*
-//        * 逻辑思路
-//        * 1、判断用户名是否存在
-//        * 2、用户名存在，判断密码是否相同
-//        * 3、相同就登录成功
-//        * 4、失败就抛出异常
-//        *
-//        * */
-//        int count = checkUsername(username);
-//        if (count > 0) {
-//            if (password.equals(logininfoMapper.selectPasswordByUsername(username))){
-//                Logininfo logininfo=logininfoMapper.login(username,password);
-//
-//                /*将用户的数据，通过UserContext工具类，存放在session*/
-//                UserContext.putLoginInfo(logininfo);
-//                System.out.println(UserContext.getLoginInfo().getUsername());
-//            }
-//            else {
-//                throw new RuntimeException("用户名或密码错误，请重新登录!");
-//            }
-//        } else {
-//            // 如果不存在,直接抛错
-//            throw new RuntimeException("用户名或密码错误，请重新登录!");
-//        }
-//    }
-
-    /**
      * 用户登陆
      *
      * @param username
@@ -144,7 +110,9 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
             UserContext.putLoginInfo(loginInfo);
             Account account = accountMapper.getMsg(loginInfo.getId());
             UserContext.putAccount(account);
-
+            Userinfo userinfo=userinfoMapper.selectById(loginInfo.getId());
+            UserContext.putUserinfo(userinfo);
+            System.out.println(userinfo.getPhonenumber());
 
         } else {
         }

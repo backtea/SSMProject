@@ -61,4 +61,10 @@
     kidCount_id, educationBackground_id, authScore, houseCondition_id, realauthid, email
     from `userinfo`
   </select>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select phoneNumber
+    from `userinfo`
+    where id=#{id,jdbcType=BIGINT}
+  </select>
 </mapper>

@@ -2,6 +2,7 @@ package com.gxa.p2p.common.util;
 
 import com.gxa.p2p.common.domain.Account;
 import com.gxa.p2p.common.domain.Logininfo;
+import com.gxa.p2p.common.domain.Userinfo;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -12,6 +13,8 @@ public class UserContext {
     public static final String USER_IN_SESSION = "logininfo";
 
     public static final String ACCOUNT_IN_SESSION = "account";
+
+    public static final String USERINFO_IN_SESSION="userinfo";
 
 
     /**
@@ -44,6 +47,14 @@ public class UserContext {
 
     public static Account getAccount() {
         return (Account) getSession().getAttribute(ACCOUNT_IN_SESSION);
+    }
+
+    public static void putUserinfo(Userinfo userinfo) {
+        getSession().setAttribute(USERINFO_IN_SESSION, userinfo);
+    }
+
+    public static Userinfo getUserinfo() {
+        return (Userinfo) getSession().getAttribute(USERINFO_IN_SESSION);
     }
 
 

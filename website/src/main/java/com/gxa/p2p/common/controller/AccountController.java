@@ -2,6 +2,7 @@ package com.gxa.p2p.common.controller;
 
 import com.gxa.p2p.common.domain.Account;
 import com.gxa.p2p.common.domain.Logininfo;
+import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +37,13 @@ public class AccountController {
     }
 
 	@RequestMapping("userInfo")
-	public String UserInfo(){
-//		Logininfo loginInfo = UserContext.getLoginInfo();
-//		model.addAttribute("logininfo",loginInfo);
+	public String UserInfo(Model model){
+		Logininfo loginInfo = UserContext.getLoginInfo();
+		model.addAttribute("logininfo",loginInfo);
+        Userinfo userinfo=UserContext.getUserinfo();
+        model.addAttribute("userinfo",userinfo);
+
+
 		return "userInfo";
 	}
 

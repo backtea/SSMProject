@@ -98,11 +98,11 @@
                             手机号码
                         </label>
                         <div class="col-sm-8">
-                            <label style="width: 250px;" class="form-control">${(userinfo.phonenumber)!''}</label>
+                            <label style="width: 250px;" class="form-control">${(userinfo.phoneNumber)!''}</label>
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <#--<div class="form-group">
                         <label class="col-sm-4 control-label">
                             个人学历
                         </label>
@@ -117,9 +117,9 @@
                                 $("#educationbackgroundItem option[value=${(userinfo.educationbackgroundItem.id)!-1}]").attr("selected", true);
                             </script>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="form-group">
+                    <#--<div class="form-group">
                         <label class="col-sm-4 control-label">
                             月收入
                         </label>
@@ -135,9 +135,9 @@
                                 $("#incomegradeItem option[value=${(userinfo.incomegradeItem.id)!-1}]").attr("selected", true);
                             </script>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="form-group">
+                    <#--<div class="form-group">
                         <label class="col-sm-4 control-label">
                             婚姻情况
                         </label>
@@ -152,9 +152,9 @@
                                 $("#marriageItem option[value=${(userinfo.marriageItem.id)!-1}]").attr("selected", true);
                             </script>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="form-group">
+                    <#--<div class="form-group">
                         <label class="col-sm-4 control-label">
                             子女情况
                         </label>
@@ -169,9 +169,9 @@
                                 $("#kidcountItem option[value=${(userinfo.kidcountItem.id)!-1}]").attr("selected", true);
                             </script>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="form-group">
+                    <#--<div class="form-group">
                         <label class="col-sm-4 control-label">
                             住房条件
                         </label>
@@ -186,14 +186,14 @@
                                 $("#houseconditionItem option[value=${(userinfo.houseconditionItem.id)!-1}]").attr("selected", true);
                             </script>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="form-group">
+                    <#--<div class="form-group">
                         <button id="submitBtn" type="submit" class="btn btn-primary col-sm-offset-5"
                                 data-loading-text="数据保存中" autocomplate="off">
                             保存数据
                         </button>
-                    </div>
+                    </div>-->
                 </form>
             </div>
         </div>
