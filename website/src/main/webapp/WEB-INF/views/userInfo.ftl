@@ -102,7 +102,7 @@
                         </div>
                     </div>
 
-                    <#--<div class="form-group">
+                    <div class="form-group">
                         <label class="col-sm-4 control-label">
                             个人学历
                         </label>
@@ -113,11 +113,11 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            &lt;#&ndash;<script type="text/javascript">
+                            <#--<script type="text/javascript">
                                 $("#educationbackgroundItem option[value=${(userinfo.educationbackgroundItem.id)!-1}]").attr("selected", true);
-                            </script>&ndash;&gt;
+                            </script>-->
                         </div>
-                    </div>-->
+                    </div>
 
                     <#--<div class="form-group">
                         <label class="col-sm-4 control-label">

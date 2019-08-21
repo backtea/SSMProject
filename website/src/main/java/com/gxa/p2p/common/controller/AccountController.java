@@ -2,15 +2,20 @@ package com.gxa.p2p.common.controller;
 
 import com.gxa.p2p.common.domain.Account;
 import com.gxa.p2p.common.domain.Logininfo;
+import com.gxa.p2p.common.domain.Systemdictionaryitem;
 import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.IAccountService;
+import com.gxa.p2p.common.service.ISystemDictionaryItemService;
+import com.gxa.p2p.common.service.impl.SystemDictionaryItemImpl;
 import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 /**
  * 个人中心 - 账户信息
@@ -25,6 +30,9 @@ public class AccountController {
 
     @Autowired
     private UserinfoMapper userinfoMapper;
+
+    @Autowired
+    private ISystemDictionaryItemService iSystemDictionaryItemService;
 
 
     @RequestMapping("personal")
@@ -45,8 +53,9 @@ public class AccountController {
 		model.addAttribute("logininfo",loginInfo);
         Userinfo userinfo=userinfoMapper.selectById(loginInfo.getId());
         model.addAttribute("userinfo",userinfo);
-
-
+        List<Systemdictionaryitem> list=iSystemDictionaryItemService.listByParentSn("educationBackground");
+        System.out.println(list);
+        model.addAttribute("educationBackgrounds",list);
 		return "userInfo";
 	}
 
