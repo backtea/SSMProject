@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gxa.p2p.common.mapper.AccountMapper" >
+  <resultMap id="BaseResultMap" type="com.gxa.p2p.common.domain.Account" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="tradePassword" property="tradepassword" jdbcType="VARCHAR" />
+    <result column="usableAmount" property="usableamount" jdbcType="DECIMAL" />
+    <result column="freezedAmount" property="freezedamount" jdbcType="DECIMAL" />
+    <result column="borrowLimit" property="borrowlimit" jdbcType="DECIMAL" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="unReceiveInterest" property="unreceiveinterest" jdbcType="DECIMAL" />
+    <result column="unReceivePrincipal" property="unreceiveprincipal" jdbcType="DECIMAL" />
+    <result column="unReturnAmount" property="unreturnamount" jdbcType="DECIMAL" />
+    <result column="remainBorrowLimit" property="remainborrowlimit" jdbcType="DECIMAL" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from `account`
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gxa.p2p.common.domain.Account" useGeneratedKeys="true" keyProperty="id" >
+    insert into `account` (id,tradePassword, usableAmount, freezedAmount,
+      borrowLimit, version, unReceiveInterest, 
+      unReceivePrincipal, unReturnAmount, remainBorrowLimit
+      )
+    values (#{id,jdbcType=BIGINT},#{tradepassword,jdbcType=VARCHAR}, #{usableamount,jdbcType=DECIMAL}, #{freezedamount,jdbcType=DECIMAL},
+      #{borrowlimit,jdbcType=DECIMAL}, #{version,jdbcType=INTEGER}, #{unreceiveinterest,jdbcType=DECIMAL}, 
+      #{unreceiveprincipal,jdbcType=DECIMAL}, #{unreturnamount,jdbcType=DECIMAL}, #{remainborrowlimit,jdbcType=DECIMAL}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.gxa.p2p.common.domain.Account" >
+    update `account`
+    set tradePassword = #{tradepassword,jdbcType=VARCHAR},
+      usableAmount = #{usableamount,jdbcType=DECIMAL},
+      freezedAmount = #{freezedamount,jdbcType=DECIMAL},
+      borrowLimit = #{borrowlimit,jdbcType=DECIMAL},
+      version = #{version,jdbcType=INTEGER},
+      unReceiveInterest = #{unreceiveinterest,jdbcType=DECIMAL},
+      unReceivePrincipal = #{unreceiveprincipal,jdbcType=DECIMAL},
+      unReturnAmount = #{unreturnamount,jdbcType=DECIMAL},
+      remainBorrowLimit = #{remainborrowlimit,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, tradePassword, usableAmount, freezedAmount, borrowLimit, version, unReceiveInterest, 
+    unReceivePrincipal, unReturnAmount, remainBorrowLimit
+    from `account`
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, tradePassword, usableAmount, freezedAmount, borrowLimit, version, unReceiveInterest, 
+    unReceivePrincipal, unReturnAmount, remainBorrowLimit
+    from `account`
+  </select>
+
+  <sql id="base_column">
+    usableAmount, freezedAmount, borrowLimit,unReceiveInterest,unReceivePrincipal,unReturnAmount
+   </sql>
+
+  <select id="getMsg" resultMap="BaseResultMap">
+    select
+    <include refid="base_column"/>
+    from `account`
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+</mapper>

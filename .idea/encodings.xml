@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/SysConstant.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/新建文本文档.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/core/src/main/resources/applicationContext.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/core/src/main/resources/jdbc.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/core/src/main/resources/mybatis-config.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/mgrsite" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/website" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/新建文本文档.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/新建文本文档.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>
