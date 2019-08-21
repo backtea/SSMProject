@@ -54,9 +54,12 @@ public class AccountController {
         Userinfo userinfo=userinfoMapper.selectById(loginInfo.getId());
         model.addAttribute("userinfo",userinfo);
         List<Systemdictionaryitem> list=iSystemDictionaryItemService.listByParentSn("educationBackground");
-        System.out.println(list);
         model.addAttribute("educationBackgrounds",list);
-		return "userInfo";
+        model.addAttribute("incomeGrades",iSystemDictionaryItemService.listByParentSn("incomeGrade"));
+        model.addAttribute("marriages",iSystemDictionaryItemService.listByParentSn("marriage"));
+        model.addAttribute("kidCounts",iSystemDictionaryItemService.listByParentSn("kidCount"));
+        model.addAttribute("houseConditions",iSystemDictionaryItemService.listByParentSn("houseCondition"));
+        return "userInfo";
 	}
 
 }

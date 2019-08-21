@@ -119,7 +119,7 @@
                         </div>
                     </div>
 
-                    <#--<div class="form-group">
+                    <div class="form-group">
                         <label class="col-sm-4 control-label">
                             月收入
                         </label>
@@ -131,13 +131,13 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            <script type="text/javascript">
+                            <#--<script type="text/javascript">
                                 $("#incomegradeItem option[value=${(userinfo.incomegradeItem.id)!-1}]").attr("selected", true);
-                            </script>
+                            </script>-->
                         </div>
-                    </div>-->
+                    </div>
 
-                    <#--<div class="form-group">
+                    <div class="form-group">
                         <label class="col-sm-4 control-label">
                             婚姻情况
                         </label>
@@ -148,13 +148,13 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            <script type="text/javascript">
+                            <#--<script type="text/javascript">
                                 $("#marriageItem option[value=${(userinfo.marriageItem.id)!-1}]").attr("selected", true);
-                            </script>
+                            </script>-->
                         </div>
-                    </div>-->
+                    </div>
 
-                    <#--<div class="form-group">
+                    <div class="form-group">
                         <label class="col-sm-4 control-label">
                             子女情况
                         </label>
@@ -165,13 +165,13 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            <script type="text/javascript">
+                            <#--<script type="text/javascript">
                                 $("#kidcountItem option[value=${(userinfo.kidcountItem.id)!-1}]").attr("selected", true);
-                            </script>
+                            </script>-->
                         </div>
-                    </div>-->
+                    </div>
 
-                    <#--<div class="form-group">
+                    <div class="form-group">
                         <label class="col-sm-4 control-label">
                             住房条件
                         </label>
@@ -182,18 +182,18 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            <script type="text/javascript">
+                            <#--<script type="text/javascript">
                                 $("#houseconditionItem option[value=${(userinfo.houseconditionItem.id)!-1}]").attr("selected", true);
-                            </script>
+                            </script>-->
                         </div>
-                    </div>-->
+                    </div>
 
-                    <#--<div class="form-group">
+                    <div class="form-group">
                         <button id="submitBtn" type="submit" class="btn btn-primary col-sm-offset-5"
                                 data-loading-text="数据保存中" autocomplate="off">
                             保存数据
                         </button>
-                    </div>-->
+                    </div>
                 </form>
             </div>
         </div>
