@@ -59,12 +59,12 @@
       realName = #{realname,jdbcType=VARCHAR},
       idNumber = #{idnumber,jdbcType=VARCHAR},
       phoneNumber = #{phonenumber,jdbcType=VARCHAR},
-      incomeGrade_id = #{incomegradeId,jdbcType=BIGINT},
-      marriage_id = #{marriageId,jdbcType=BIGINT},
-      kidCount_id = #{kidcountId,jdbcType=BIGINT},
-      educationBackground_id = #{educationbackgroundId,jdbcType=BIGINT},
+      incomeGrade_id = #{incomegradeItem.id,jdbcType=BIGINT},
+      marriage_id = #{marriageItem.id,jdbcType=BIGINT},
+      kidCount_id = #{kidcountItem.id,jdbcType=BIGINT},
+      educationBackground_id = #{educationbackgroundItem.id,jdbcType=BIGINT},
       authScore = #{authscore,jdbcType=INTEGER},
-      houseCondition_id = #{houseconditionId,jdbcType=BIGINT},
+      houseCondition_id = #{houseconditionItem.id,jdbcType=BIGINT},
       realauthid = #{realauthid,jdbcType=BIGINT},
       email = #{email,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}

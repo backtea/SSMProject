@@ -12,4 +12,14 @@ public interface IUserInfoService {
     void add(Userinfo userInfo);
 
     Userinfo getCurrentUserinfo(Long id);
+
+    /**
+     * 用户基本资料的保存
+     *
+     * @param userInfo
+     */
+    public void updateBasicInfo(Userinfo userInfo);
+
+    void updateUserInfo(Userinfo userinfo);
+
 }
