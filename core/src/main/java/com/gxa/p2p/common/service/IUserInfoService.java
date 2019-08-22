@@ -11,4 +11,5 @@ public interface IUserInfoService {
      */
     void add(Userinfo userInfo);
 
+    Userinfo getCurrentUserinfo(Long id);
 }

@@ -29,6 +29,56 @@ public class Userinfo {
 
     private String email;
 
+    private Systemdictionaryitem educationbackgroundItem;
+
+    private Systemdictionaryitem incomegradeItem;
+
+    private Systemdictionaryitem marriageItem;
+
+    private Systemdictionaryitem kidcountItem;
+
+    private Systemdictionaryitem houseconditionItem;
+
+    public Systemdictionaryitem getMarriageItem() {
+        return marriageItem;
+    }
+
+    public void setMarriageItem(Systemdictionaryitem marriageItem) {
+        this.marriageItem = marriageItem;
+    }
+
+    public Systemdictionaryitem getKidcountItem() {
+        return kidcountItem;
+    }
+
+    public void setKidcountItem(Systemdictionaryitem kidcountItem) {
+        this.kidcountItem = kidcountItem;
+    }
+
+    public Systemdictionaryitem getHouseconditionItem() {
+        return houseconditionItem;
+    }
+
+    public void setHouseconditionItem(Systemdictionaryitem houseconditionItem) {
+        this.houseconditionItem = houseconditionItem;
+    }
+
+    public Systemdictionaryitem getIncomegradeItem() {
+        return incomegradeItem;
+    }
+
+    public void setIncomegradeItem(Systemdictionaryitem incomegradeItem) {
+        this.incomegradeItem = incomegradeItem;
+    }
+
+    public Systemdictionaryitem getEducationbackgroundItem() {
+        return educationbackgroundItem;
+    }
+
+    public void setEducationbackgroundItem(Systemdictionaryitem educationbackgroundItem) {
+        this.educationbackgroundItem = educationbackgroundItem;
+    }
+
     public Long getId() {
         return id;
     }

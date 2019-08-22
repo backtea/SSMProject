@@ -15,9 +15,8 @@
 	</div>
 </div>
 
-<#--
 <#if currentNav??>
 <script type="text/javascript">
 	$("#"+"${currentNav}").addClass("active");
 </script>
-</#if>-->
+</#if>

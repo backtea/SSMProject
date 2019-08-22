@@ -28,13 +28,6 @@ public class AccountController {
     @Autowired
     private AccountMapper accountMapper;
 
-    @Autowired
-    private UserinfoMapper userinfoMapper;
-
-    @Autowired
-    private ISystemDictionaryItemService iSystemDictionaryItemService;
-
-
     @RequestMapping("personal")
     public String personalCenter(Model model) {
 
@@ -46,20 +39,5 @@ public class AccountController {
 
         return "personal";
     }
-
-	@RequestMapping("userInfo")
-	public String UserInfo(Model model){
-		Logininfo loginInfo = UserContext.getLoginInfo();
-		model.addAttribute("logininfo",loginInfo);
-        Userinfo userinfo=userinfoMapper.selectById(loginInfo.getId());
-        model.addAttribute("userinfo",userinfo);
-        List<Systemdictionaryitem> list=iSystemDictionaryItemService.listByParentSn("educationBackground");
-        model.addAttribute("educationBackgrounds",list);
-        model.addAttribute("incomeGrades",iSystemDictionaryItemService.listByParentSn("incomeGrade"));
-        model.addAttribute("marriages",iSystemDictionaryItemService.listByParentSn("marriage"));
-        model.addAttribute("kidCounts",iSystemDictionaryItemService.listByParentSn("kidCount"));
-        model.addAttribute("houseConditions",iSystemDictionaryItemService.listByParentSn("houseCondition"));
-        return "userInfo";
-	}
 
 }

@@ -65,12 +65,12 @@
                             <p class="form-control-static">
                                 未认证
                                 <a href="/realAuth.do">[马上认证]</a>
-                                <#--										<#if (userinfo.isRealAuth)>
-                                                                            ${userinfo.anonymousRealName}
-                                                                        <#else>
-                                                                            未认证
-                                                                            <a href="/realAuth.do">[马上认证]</a>
-                                                                        </#if>-->
+                            <#--										<#if (userinfo.isRealAuth)>
+                                                                        ${userinfo.anonymousRealName}
+                                                                    <#else>
+                                                                        未认证
+                                                                        <a href="/realAuth.do">[马上认证]</a>
+                                                                    </#if>-->
                             </p>
                         </div>
                     </div>
@@ -83,12 +83,12 @@
                             <p class="form-control-static">
                                 未认证
                                 <a href="/realAuth.do">[马上认证]</a>
-                                <#--										<#if (userinfo.isRealAuth)>
-                                                                            ${userinfo.anonymousIdNumber}
-                                                                        <#else>
-                                                                            未认证
-                                                                            <a href="/realAuth.do">[马上认证]</a>
-                                                                        </#if>-->
+                            <#--										<#if (userinfo.isRealAuth)>
+                                                                        ${userinfo.anonymousIdNumber}
+                                                                    <#else>
+                                                                        未认证
+                                                                        <a href="/realAuth.do">[马上认证]</a>
+                                                                    </#if>-->
                             </p>
                         </div>
                     </div>
@@ -113,9 +113,9 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            <#--<script type="text/javascript">
+                            <script type="text/javascript">
                                 $("#educationbackgroundItem option[value=${(userinfo.educationbackgroundItem.id)!-1}]").attr("selected", true);
-                            </script>-->
+                            </script>
                         </div>
                     </div>
 
@@ -131,9 +131,9 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            <#--<script type="text/javascript">
+                            <script type="text/javascript">
                                 $("#incomegradeItem option[value=${(userinfo.incomegradeItem.id)!-1}]").attr("selected", true);
-                            </script>-->
+                            </script>
                         </div>
                     </div>
 
@@ -148,52 +148,53 @@
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
-                            <#--<script type="text/javascript">
-                                $("#marriageItem option[value=${(userinfo.marriageItem.id)!-1}]").attr("selected", true);
-                            </script>-->
+                        <script type="text/javascript">
+                            $("#marriageItem option[value=${(userinfo.marriageItem.id)!-1}]").attr("selected", true);
+                        </script>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-4 control-label">
-                            子女情况
-                        </label>
-                        <div class="col-sm-8">
-                            <select class="form-control" id="kidcountItem" name="kidcountItem.id" style="width: 180px"
-                                    autocomplate="off">
-                                <#list kidCounts as item>
-                                    <option value="${item.id}">${item.title}</option>
-                                </#list>
-                            </select>
-                            <#--<script type="text/javascript">
-                                $("#kidcountItem option[value=${(userinfo.kidcountItem.id)!-1}]").attr("selected", true);
-                            </script>-->
-                        </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">
+                        子女情况
+                    </label>
+                    <div class="col-sm-8">
+                        <select class="form-control" id="kidcountItem" name="kidcountItem.id" style="width: 180px"
+                                autocomplate="off">
+                            <#list kidCounts as item>
+                                <option value="${item.id}">${item.title}</option>
+                            </#list>
+                        </select>
+                    <script type="text/javascript">
+                        $("#kidcountItem option[value=${(userinfo.kidcountItem.id)!-1}]").attr("selected", true);
+                    </script>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">
+                        住房条件
+                    </label>
+                    <div class="col-sm-8">
+                        <select class="form-control" id="houseconditionItem" name="houseconditionItem.id"
+                                style="width: 180px" autocomplate="off">
+                            <#list houseConditions as item>
+                                <option value="${item.id}">${item.title}</option>
+                            </#list>
+                        </select>
+                    <script type="text/javascript">
+                        $("#houseconditionItem option[value=${(userinfo.houseconditionItem.id)!-1}]").attr("selected", true);
+                    </script>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-4 control-label">
-                            住房条件
-                        </label>
-                        <div class="col-sm-8">
-                            <select class="form-control" id="houseconditionItem" name="houseconditionItem.id"
-                                    style="width: 180px" autocomplate="off">
-                                <#list houseConditions as item>
-                                    <option value="${item.id}">${item.title}</option>
-                                </#list>
-                            </select>
-                            <#--<script type="text/javascript">
-                                $("#houseconditionItem option[value=${(userinfo.houseconditionItem.id)!-1}]").attr("selected", true);
-                            </script>-->
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="form-group">
-                        <button id="submitBtn" type="submit" class="btn btn-primary col-sm-offset-5"
-                                data-loading-text="数据保存中" autocomplate="off">
-                            保存数据
-                        </button>
-                    </div>
+                <div class="form-group">
+                    <button id="submitBtn" type="submit" class="btn btn-primary col-sm-offset-5"
+                            data-loading-text="数据保存中" autocomplate="off">
+                        保存数据
+                    </button>
+                </div>
                 </form>
             </div>
         </div>

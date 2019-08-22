@@ -16,6 +16,25 @@
     <result column="houseCondition_id" property="houseconditionId" jdbcType="BIGINT" />
     <result column="realauthid" property="realauthid" jdbcType="BIGINT" />
     <result column="email" property="email" jdbcType="VARCHAR" />
+    <association property="educationbackgroundItem" javaType="Systemdictionaryitem"
+                 column="educationBackground_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+
+    <association property="incomegradeItem" javaType="Systemdictionaryitem"
+                 column="incomeGrade_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+
+    <association property="marriageItem" javaType="Systemdictionaryitem"
+                 column="marriage_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+
+    <association property="kidcountItem" javaType="Systemdictionaryitem"
+                 column="kidCount_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+
+    <association property="houseconditionItem" javaType="Systemdictionaryitem"
+                 column="houseCondition_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from `userinfo`
@@ -63,7 +82,8 @@
   </select>
 
   <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
-    select phoneNumber
+    select id, version, bitState, realName, idNumber, phoneNumber, incomeGrade_id, marriage_id,
+    kidCount_id, educationBackground_id, authScore, houseCondition_id, realauthid, email
     from `userinfo`
     where id=#{id,jdbcType=BIGINT}
   </select>

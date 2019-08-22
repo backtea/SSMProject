@@ -16,4 +16,11 @@ public class UserInfoServiceImpl implements IUserInfoService {
         userInfoMapper.insert(userInfo);
     }
 
+    @Override
+    public Userinfo getCurrentUserinfo(Long id) {
+        Userinfo userinfo=new Userinfo();
+
+        return null;
+    }
+
 }

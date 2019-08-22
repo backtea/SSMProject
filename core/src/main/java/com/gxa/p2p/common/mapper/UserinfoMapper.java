@@ -1,6 +1,8 @@
 package com.gxa.p2p.common.mapper;
 
 import com.gxa.p2p.common.domain.Userinfo;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface UserinfoMapper {
