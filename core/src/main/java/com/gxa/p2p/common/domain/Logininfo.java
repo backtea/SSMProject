@@ -10,9 +10,9 @@ public class Logininfo {
     private Byte state;
     public static Byte STATE_NORMAL=0;
 
-    public static final int USER_WEB=1;
-    public static final int USER_WMGR=0;
-    private Byte usertype=0;
+    public static final Byte USER_WEB=1;
+    public static final Byte USER_WMGR=0;
+    private Byte usertype;
 
     private Boolean admin;
 

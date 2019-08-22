@@ -18,8 +18,14 @@ public interface IUserInfoService {
      *
      * @param userInfo
      */
-    public void updateBasicInfo(Userinfo userInfo);
+    void updateBasicInfo(Userinfo userInfo);
 
     void updateUserInfo(Userinfo userinfo);
 
+    /**
+     * 用户登录
+     * @param username
+     * @param password
+     *
+     * */
 }

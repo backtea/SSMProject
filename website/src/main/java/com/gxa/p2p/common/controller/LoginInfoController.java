@@ -50,17 +50,6 @@ public class LoginInfoController {
 
     @RequestMapping("login")
     @ResponseBody
-//    public JSONResult login(String username, String password) {
-//
-//        JSONResult json = new JSONResult();
-//        try {
-//            iLoginInfoService.login(username, password);
-//        } catch (RuntimeException re) {
-//            json.setSuccess(false);
-//            json.setMsg(re.getMessage());
-//        }
-//        return json;
-//    }
     public JSONResult login(String username, String password, HttpServletRequest request) {
 
         Logininfo loginInfo = iLoginInfoService.login(username, password, request, Logininfo.USER_WEB);

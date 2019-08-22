@@ -33,6 +33,6 @@ public interface LogininfoMapper {
      */
     Logininfo login(@Param("username") String username,
                     @Param("password") String password,
-                    @Param("usertype") int usertype);
+                    @Param("usertype") Byte usertype);
 
 }

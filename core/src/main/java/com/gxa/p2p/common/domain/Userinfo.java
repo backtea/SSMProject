@@ -5,7 +5,7 @@ import com.gxa.p2p.common.util.BitStatesUtils;
 public class Userinfo {
     private Long id;
 
-    private Integer version=1;
+    private Integer version=0;
 
     private Long bitstate=1l;
 

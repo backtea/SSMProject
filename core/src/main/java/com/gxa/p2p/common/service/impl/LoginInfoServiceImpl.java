@@ -1,12 +1,14 @@
 package com.gxa.p2p.common.service.impl;
 
 import com.gxa.p2p.common.domain.Account;
+import com.gxa.p2p.common.domain.Iplog;
 import com.gxa.p2p.common.domain.Logininfo;
 import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.mapper.LogininfoMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.IAccountService;
+import com.gxa.p2p.common.service.IIpLogService;
 import com.gxa.p2p.common.service.ILoginInfoService;
 import com.gxa.p2p.common.service.IUserInfoService;
 import com.gxa.p2p.common.util.UserContext;
@@ -14,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 @Service
 public class LoginInfoServiceImpl implements ILoginInfoService {
@@ -32,6 +35,9 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
 
     @Autowired
     private UserinfoMapper userinfoMapper;
+
+    @Autowired
+    private IIpLogService iIpLogService;
 
     /**
      * 检查用户名是否已存在
@@ -67,6 +73,7 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
             li.setUsername(username);
             li.setPassword(password);
             li.setState(Logininfo.STATE_NORMAL);
+            li.setUsertype(Logininfo.USER_WEB);
             logininfoMapper.insert(li);
             Long id = li.getId();
             Account account = new Account();
@@ -100,18 +107,24 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
      * @param password
      */
     @Override
-    public Logininfo login(String username, String password, HttpServletRequest request, int usertype) {
+    public Logininfo login(String username, String password, HttpServletRequest request, Byte usertype) {
 
         Logininfo loginInfo = logininfoMapper.login(username, password, usertype);
 
+        Iplog iplog = new Iplog();
+        iplog.setIp(request.getRemoteAddr());
+        iplog.setUsername(username);
+        iplog.setUsertype(loginInfo.getUsertype());
+        iplog.setLogintime(new Date());
 
         if (loginInfo!=null) {
             /* 将登录用户的数据，通过UserContext工具类，存放至session*/
             UserContext.putLoginInfo(loginInfo);
-
+            iplog.setState(Iplog.LOGIN_SUCCESS);
         } else {
+            iplog.setState(Iplog.LOGIN_FAILED);
         }
-
+        iIpLogService.add(iplog);
         return loginInfo;
     }
 

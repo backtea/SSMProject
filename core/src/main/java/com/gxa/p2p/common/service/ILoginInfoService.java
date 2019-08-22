@@ -16,7 +16,7 @@ public interface ILoginInfoService {
      *  @param username
      * @param password
      */
-    Logininfo login(String username, String password, HttpServletRequest request, int usertype);
+    Logininfo login(String username, String password, HttpServletRequest request, Byte usertype);
 
 
 }

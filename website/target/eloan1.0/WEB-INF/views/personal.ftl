@@ -233,9 +233,9 @@
 		    </div>
 		  </div>
 		</div>
-<#--		</#if>-->
+		<#--</#if>
 
 
-<#--		<#include "common/footer-tpl.ftl" />-->
+		<#include "common/footer-tpl.ftl" />-->
 	</body>
 </html>
