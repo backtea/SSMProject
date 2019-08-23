@@ -7,6 +7,8 @@ import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.mapper.LogininfoMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
+import com.gxa.p2p.common.query.LoginInfoQueryObject;
+import com.gxa.p2p.common.query.PageResultSet;
 import com.gxa.p2p.common.service.IAccountService;
 import com.gxa.p2p.common.service.IIpLogService;
 import com.gxa.p2p.common.service.ILoginInfoService;
@@ -17,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class LoginInfoServiceImpl implements ILoginInfoService {
@@ -115,6 +118,7 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
         iplog.setIp(request.getRemoteAddr());
         iplog.setUsername(username);
         iplog.setUsertype(loginInfo.getUsertype());
+        iplog.setLogininfoid(loginInfo.getId());
         iplog.setLogintime(new Date());
 
         if (loginInfo!=null) {
@@ -126,6 +130,33 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
         }
         iIpLogService.add(iplog);
         return loginInfo;
+    }
+
+    /**
+     * 用户信息分页查询
+     *
+     * @param loginInfoQueryObject
+     * @return
+     */
+    @Override
+    public PageResultSet queryForPage(LoginInfoQueryObject loginInfoQueryObject) {
+
+        int count = logininfoMapper.queryForCount();
+
+        PageResultSet pageResultSet;
+        //如果存在符合条件的数据，对数据进行分页查询，获取当前页的数据;没有则返回空的数据集
+        if (count > 0) {
+            List<Logininfo> list = logininfoMapper.queryForPage(loginInfoQueryObject);
+            pageResultSet = new PageResultSet(
+                    list,
+                    count,
+                    loginInfoQueryObject.getCurrentPage(),
+                    loginInfoQueryObject.getPageSize());
+        } else {
+            pageResultSet = PageResultSet.empty(loginInfoQueryObject.getPageSize());
+        }
+
+        return pageResultSet;
     }
 
 }
