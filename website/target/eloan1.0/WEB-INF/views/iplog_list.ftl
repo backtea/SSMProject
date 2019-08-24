@@ -55,13 +55,13 @@
                 <input type="hidden" id="currentPage" name="currentPage" value=""/>
                 <div class="form-group">
                     <label>时间范围</label>
-                    <#--<input type="text" class="form-control beginDate" name="beginDate"-->
-                           <#--value='${(iplogQueryObject.beginDate?string("yyyy-MM-dd"))!""}'/>-->
+                    <input type="text" class="form-control beginDate" name="beginDate"
+                           value='${(iplogQueryObject.beginDate?string("yyyy-MM-dd"))!""}'/>
                 </div>
                 <div class="form-group">
                 <label></label>
-                <#--<input type="text" class="form-control endDate" name="endDate"-->
-                       <#--value='${(iplogQueryObject.endDate?string("yyyy-MM-dd"))!""}'/>-->
+                <input type="text" class="form-control endDate" name="endDate"
+                       value='${(iplogQueryObject.endDate?string("yyyy-MM-dd"))!""}'/>
             </div>
                 <div class="form-group">
                     <label>状态</label>
@@ -70,9 +70,9 @@
                         <option value="0">登录失败</option>
                         <option value="1">登录成功</option>
                     </select>
-                    <#--<script type="text/javascript">
+                    <script type="text/javascript">
                         $("#state option[value=${iplogQueryObject.state}]").attr("selected", true);
-                    </script>-->
+                    </script>
                 </div>
                 <div class="form-group">
                     <button type="button" id="query" class="btn btn-success"><i class="icon-search"></i> 查询</button>

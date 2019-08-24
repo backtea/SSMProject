@@ -37,26 +37,55 @@
     from `iplog`
     where id = #{id,jdbcType=BIGINT}
   </select>
+
     <select id="selectAll" resultMap="BaseResultMap">
     select id, ip, state, username, loginInfoId, userType, loginTime
     from `iplog`
   </select>
 
-    <select id="queryLogForCount" parameterType="java.lang.String" resultType="int">
+    <select id="queryLogForCount" resultType="int">
         SELECT count(id)
         FROM `iplog`
-        where username=#{username}
+        <where>
+            <if test="username !=null and username != ''">
+                AND username = #{username}
+            </if>
+            <if test="state != -1">
+                AND state =#{state}
+            </if>
+            <if test="beginDate !=null">
+                AND loginTime &gt;= #{beginDate}
+            </if>
+            <if test="endDate !=null">
+                AND loginTime &lt;= #{endDate}
+            </if>
+        </where>
     </select>
 
     <select id="QueryLogForPage" resultMap="BaseResultMap">
         SELECT
-            username,
-            state,
-            loginTime,
-            ip
+        username,
+        state,
+        loginTime,
+        ip
         FROM `iplog`
-        where username=#{username}
-        ORDER BY loginTime ASC
+        <where>
+            <if test="username !=null and username != ''">
+                AND username = #{username}
+            </if>
+            <if test="state != -1">
+                AND state=#{state}
+            </if>
+            <if test="beginDate !=null">
+                AND loginTime &gt;= #{beginDate}
+            </if>
+            <if test="endDate !=null">
+                AND loginTime &lt;= #{endDate}
+            </if>
+        </where>
+        ORDER BY loginTime DESC
         LIMIT #{start},#{pageSize}
     </select>
+
+
 </mapper>

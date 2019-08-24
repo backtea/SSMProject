@@ -8,30 +8,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ffe1acbd-c0dc-40e6-af19-9b6060b40577" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Logininfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Logininfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LogininfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LogininfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/QueryObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/QueryObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IIpLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IIpLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IpLogQueryObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IpLogQueryObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IpLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IpLogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/Logininfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/Logininfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/IplogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/IplogMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/IplogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/IplogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/LogininfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/LogininfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/query/QueryObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/query/QueryObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/IIpLogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/IIpLogService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/query/IpLogQueryObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/query/IpLogQueryObject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/impl/IpLogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/impl/IpLogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/admin/controller/UserListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/admin/controller/UserListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgrsite/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/src/main/webapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgrsite/target/classes/com/gxa/p2p/admin/controller/UserListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/target/classes/com/gxa/p2p/admin/controller/UserListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgrsite/target/eloan1.0/WEB-INF/classes/com/gxa/p2p/admin/controller/UserListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/target/eloan1.0/WEB-INF/classes/com/gxa/p2p/admin/controller/UserListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgrsite/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgrsite/target/eloan1.0/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/target/eloan1.0/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/target/classes/com/gxa/p2p/common/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/classes/com/gxa/p2p/common/controller/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/classes/com/gxa/p2p/common/controller/AccountController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/classes/com/gxa/p2p/common/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/classes/com/gxa/p2p/common/controller/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/views/iplog_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/views/iplog_list.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,11 +91,11 @@
           <entry key="account" value="13" />
           <entry key="class" value="2" />
           <entry key="css" value="1" />
-          <entry key="ftl" value="91" />
+          <entry key="ftl" value="97" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="25" />
-          <entry key="iplog" value="24" />
-          <entry key="java" value="491" />
+          <entry key="html" value="26" />
+          <entry key="iplog" value="28" />
+          <entry key="java" value="522" />
           <entry key="js" value="1" />
           <entry key="jsp" value="1" />
           <entry key="logininfo" value="30" />
@@ -116,55 +105,65 @@
           <entry key="systemdictionaryitem" value="32" />
           <entry key="txt" value="8" />
           <entry key="userinfo" value="33" />
-          <entry key="xml" value="148" />
+          <entry key="xml" value="157" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="CSS" value="1" />
-          <entry key="Database Element" value="149" />
-          <entry key="FTL" value="91" />
-          <entry key="HTML" value="25" />
-          <entry key="JAVA" value="491" />
+          <entry key="Database Element" value="153" />
+          <entry key="FTL" value="97" />
+          <entry key="HTML" value="26" />
+          <entry key="JAVA" value="522" />
           <entry key="JSP" value="1" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="Properties" value="1" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="2" />
-          <entry key="XML" value="148" />
+          <entry key="XML" value="157" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="51" />
           <entry key="dummy" value="55" />
-          <entry key="ftl" value="74" />
+          <entry key="ftl" value="83" />
           <entry key="html" value="115" />
-          <entry key="java" value="4420" />
+          <entry key="java" value="4886" />
           <entry key="properties" value="14" />
           <entry key="sql" value="11" />
           <entry key="txt" value="8" />
-          <entry key="xml" value="842" />
+          <entry key="xml" value="1422" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="FTL" value="74" />
+          <entry key="FTL" value="83" />
           <entry key="HTML" value="115" />
-          <entry key="JAVA" value="4420" />
+          <entry key="JAVA" value="4886" />
           <entry key="PLAIN_TEXT" value="63" />
           <entry key="Properties" value="14" />
-          <entry key="SQL" value="44" />
+          <entry key="SQL" value="57" />
           <entry key="Scratch" value="51" />
-          <entry key="XML" value="809" />
+          <entry key="XML" value="1376" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -236,14 +235,14 @@
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LogininfoMapper.xml" />
         <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IpLogQuery.java" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/QueryObject.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IpLogQueryObject.java" />
-        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IpLogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IIpLogService.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IpLogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java" />
+        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IpLogQueryObject.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml" />
       </list>
     </option>
   </component>
@@ -309,7 +308,7 @@
       <path value="$PROJECT_DIR$/website/src/main/webapp/js/plugins/flipcountdown/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="975" />
     <option name="y" value="30" />
     <option name="width" value="1030" />
@@ -391,6 +390,73 @@
             <path>
               <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="p2p" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="p2p" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="p2p" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="p2p" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="p2p" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="p2p" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -443,6 +509,33 @@
               <item name="p2p" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -541,7 +634,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566608758897" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566631832692" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spring" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -768,12 +861,12 @@
       <workItem from="1566435399638" duration="21442000" />
       <workItem from="1566521381862" duration="9922000" />
       <workItem from="1566536918398" duration="11580000" />
-      <workItem from="1566607878780" duration="872000" />
+      <workItem from="1566607878780" duration="17727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114030000" />
+    <option name="totallyTimeSpent" value="130885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,8 +879,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="-7" width="1481" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25368938" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20660576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -812,7 +906,7 @@
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="JRebel Console" order="14" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="15" weight="0.32871014" />
-      <window_info anchor="bottom" id="Run" order="16" sideWeight="0.49964863" weight="0.57975036" />
+      <window_info anchor="bottom" id="Run" order="16" sideWeight="0.49964863" weight="0.44937587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32484847" />
       <window_info anchor="right" id="Database" order="2" weight="0.16163036" />
@@ -874,30 +968,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/css/bank.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/新建文本文档.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/admin/新建文本文档.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -954,20 +1024,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/iplog_list.ftl" />
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1011">
-          <caret line="140" column="62" lean-forward="true" selection-start-line="140" selection-start-column="62" selection-end-line="140" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/personal.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="240" column="7" lean-forward="true" selection-start-line="240" selection-start-column="7" selection-end-line="240" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/links-tpl.ftl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1019,20 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/UserContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1071,17 +1113,14 @@
     <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/新建文本文档.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Logininfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,45 +1131,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://87a6cf5e-f6b7-44c6-91a3-5343c5fdc446/schema/test/table/iplog">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="106" column="49" lean-forward="true" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LogininfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="151" column="20" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/PageResultSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/LoginInfoQueryObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1144,64 +1148,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/QueryObject.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/LoginInfoQueryObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IpLogQueryObject.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/QueryObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="151" column="20" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/实训/配置文件/IplogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-597" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="140" column="62" lean-forward="true" selection-start-line="140" selection-start-column="62" selection-end-line="140" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IpLogServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="519">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/UserContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="23">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml">
+    <entry file="file://D:/实训/配置文件/pom/website/IplogQueryObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        <state relative-caret-position="81">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IIpLogService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LogininfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+        <state relative-caret-position="466">
+          <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IpLogQueryObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <element signature="e#1184#1185#0" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+          <folding>
+            <element signature="e#2582#2586#0" expanded="true" />
+            <element signature="e#3015#3019#0" expanded="true" />
+            <element signature="e#3121#3125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://87a6cf5e-f6b7-44c6-91a3-5343c5fdc446/schema/test/table/iplog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2118" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/personal.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2462">
+          <caret line="197" column="30" lean-forward="true" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

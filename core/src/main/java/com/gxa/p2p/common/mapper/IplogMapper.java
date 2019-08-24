@@ -19,7 +19,7 @@ public interface IplogMapper {
 
     int updateByPrimaryKey(Iplog record);
 
-    int queryLogForCount(String username);
+    int queryLogForCount(IpLogQueryObject ipLogQueryObject);
 
     List<Iplog> QueryLogForPage(IpLogQueryObject ipLogQueryObject);
 }

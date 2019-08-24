@@ -45,10 +45,9 @@ public class AccountController {
 
     @RequestMapping("ipLog")
     public String toIpLog(IpLogQueryObject ipLogQueryObject,Model model){
-        Logininfo logininfo = UserContext.getLoginInfo();
-        ipLogQueryObject.setUsername(logininfo.getUsername());
-
         model.addAttribute("pageResultSet",iIpLogService.queryLogForPage(ipLogQueryObject));
+        model.addAttribute("iplogQueryObject",ipLogQueryObject);
+        System.out.println(ipLogQueryObject.getBeginDate());
         return "iplog_list";
     }
 }
