@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.gxa.p2p.common.mapper.IplogMapper" >
-  <resultMap id="BaseResultMap" type="com.gxa.p2p.common.domain.Iplog" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="ip" property="ip" jdbcType="VARCHAR" />
-    <result column="state" property="state" jdbcType="TINYINT" />
-    <result column="username" property="username" jdbcType="VARCHAR" />
-    <result column="loginInfoId" property="logininfoid" jdbcType="BIGINT" />
-    <result column="userType" property="usertype" jdbcType="TINYINT" />
-    <result column="loginTime" property="logintime" jdbcType="TIMESTAMP" />
-  </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+<mapper namespace="com.gxa.p2p.common.mapper.IplogMapper">
+    <resultMap id="BaseResultMap" type="com.gxa.p2p.common.domain.Iplog">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="ip" property="ip" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="TINYINT"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="loginInfoId" property="logininfoid" jdbcType="BIGINT"/>
+        <result column="userType" property="usertype" jdbcType="TINYINT"/>
+        <result column="loginTime" property="logintime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from `iplog`
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.gxa.p2p.common.domain.Iplog" useGeneratedKeys="true" keyProperty="id" >
+    <insert id="insert" parameterType="com.gxa.p2p.common.domain.Iplog" useGeneratedKeys="true" keyProperty="id">
     insert into `iplog` (ip, state, username, 
       loginInfoId, userType, loginTime
       )
@@ -22,7 +22,7 @@
       #{logininfoid,jdbcType=BIGINT}, #{usertype,jdbcType=TINYINT}, #{logintime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.gxa.p2p.common.domain.Iplog" >
+    <update id="updateByPrimaryKey" parameterType="com.gxa.p2p.common.domain.Iplog">
     update `iplog`
     set ip = #{ip,jdbcType=VARCHAR},
       state = #{state,jdbcType=TINYINT},
@@ -32,13 +32,31 @@
       loginTime = #{logintime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
     select id, ip, state, username, loginInfoId, userType, loginTime
     from `iplog`
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
+    <select id="selectAll" resultMap="BaseResultMap">
     select id, ip, state, username, loginInfoId, userType, loginTime
     from `iplog`
   </select>
+
+    <select id="queryLogForCount" parameterType="java.lang.String" resultType="int">
+        SELECT count(id)
+        FROM `iplog`
+        where username=#{username}
+    </select>
+
+    <select id="QueryLogForPage" resultMap="BaseResultMap">
+        SELECT
+            username,
+            state,
+            loginTime,
+            ip
+        FROM `iplog`
+        where username=#{username}
+        ORDER BY loginTime ASC
+        LIMIT #{start},#{pageSize}
+    </select>
 </mapper>

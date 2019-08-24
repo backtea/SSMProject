@@ -82,7 +82,7 @@
             usertype,
             admin
         FROM `logininfo`
-        ORDER BY username DESC
+        ORDER BY username ASC
         LIMIT #{start},#{pageSize}
     </select>
 </mapper>

@@ -63,4 +63,17 @@ public class Logininfo {
     public void setAdmin(Boolean admin) {
         this.admin = admin;
     }
+
+    @Override
+    public String toString() {
+        return "Logininfo{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", state=" + state +
+                ", usertype=" + usertype +
+                ", admin=" + admin +
+                '}';
+    }
+
 }

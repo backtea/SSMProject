@@ -1,12 +1,12 @@
 package com.gxa.p2p.common.controller;
 
-import com.gxa.p2p.common.domain.Account;
-import com.gxa.p2p.common.domain.Logininfo;
-import com.gxa.p2p.common.domain.Systemdictionaryitem;
-import com.gxa.p2p.common.domain.Userinfo;
+import com.gxa.p2p.common.domain.*;
 import com.gxa.p2p.common.mapper.AccountMapper;
+import com.gxa.p2p.common.mapper.IplogMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
+import com.gxa.p2p.common.query.IpLogQueryObject;
 import com.gxa.p2p.common.service.IAccountService;
+import com.gxa.p2p.common.service.IIpLogService;
 import com.gxa.p2p.common.service.ISystemDictionaryItemService;
 import com.gxa.p2p.common.service.impl.SystemDictionaryItemImpl;
 import com.gxa.p2p.common.util.UserContext;
@@ -28,6 +28,9 @@ public class AccountController {
     @Autowired
     private AccountMapper accountMapper;
 
+    @Autowired
+    private IIpLogService iIpLogService;
+
     @RequestMapping("personal")
     public String personalCenter(Model model) {
 
@@ -40,4 +43,12 @@ public class AccountController {
         return "personal";
     }
 
+    @RequestMapping("ipLog")
+    public String toIpLog(IpLogQueryObject ipLogQueryObject,Model model){
+        Logininfo logininfo = UserContext.getLoginInfo();
+        ipLogQueryObject.setUsername(logininfo.getUsername());
+
+        model.addAttribute("pageResultSet",iIpLogService.queryLogForPage(ipLogQueryObject));
+        return "iplog_list";
+    }
 }
