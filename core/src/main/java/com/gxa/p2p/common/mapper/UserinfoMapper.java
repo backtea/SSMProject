@@ -17,4 +17,6 @@ public interface UserinfoMapper {
     int updateByPrimaryKey(Userinfo record);
 
     Userinfo selectById(Long id);
+
+    Userinfo getCurrentUserInfo(Long id);
 }

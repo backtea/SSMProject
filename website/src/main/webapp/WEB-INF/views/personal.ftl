@@ -9,7 +9,61 @@
 		<link type="text/css" rel="stylesheet" href="/css/account.css" />
 
 		<script type="text/javascript">
+            //点击马上绑定
+            $(function() {
+                $("#showBindPhoneModal").click(function() {
+                    $("#bindPhoneModal").modal("show");
+                });
 
+                //给发送验证码按钮添加事件
+                $("#sendVerifyCode").click(function() {
+                    var phoneNumber = $("#phoneNumber").val(); //获取到手机号后发送ajax请求
+                    var _this = $(this);
+                    _this.attr("disabled", true); //点击之后立刻禁用按钮
+                    if (phoneNumber) {
+                        $.ajax({
+                            type : "POST",
+                            url : "/sendVerifyCode.do",
+                            dataType : "json",
+                            data : { //发送到服务器的数据
+                                phoneNumber : phoneNumber
+                            },
+                            success : function(data) {
+                                if (data.success) { //做倒计时
+                                    var count = 60;
+                                    var timer = window.setInterval(function() {
+                                        count--;
+                                        if (count <= 0) {
+                                            window.clearInterval(timer);
+                                            _this.text("重新发送验证码");
+                                            _this.attr("disabled", false);
+                                        } else {
+                                            _this.text(count + "秒后重新发送");
+                                        }
+                                    }, 1000);
+                                } else {
+                                    $.messager.popup(data.msg);
+                                    _this.attr("disabled", false);
+                                }
+                            }
+                        })
+                    }
+                });
+
+                // 给绑定手机确认按钮添加点击事件
+                $("#bindPhone").click(function() {
+                    //提交整个表单
+                    $("#bindPhoneForm").ajaxSubmit({
+                        success : function(data) {
+                            if (data.success) {
+                                window.location.reload(); //刷新当前页面  关闭模式窗
+                            } else {
+                                $.messager.confirm("提示",data.msg);
+                            }
+                        }
+                    })
+                });
+			});
 		</script>
 	</head>
 	<body>
@@ -104,19 +158,19 @@
 											</div>
 											<div class="el-accoun-auth-right">
 												<h5>手机认证</h5>
-												未认证
-												<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>
-<#--												<#if userinfo.isBindPhone >
-												<p>
-													已认证
-													<a href="#">查看</a>
-												</p>
-												<#else>
-												<p>
-													未认证
-													<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>
-												</p>
-												</#if>-->
+												<#--未认证-->
+												<#--<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>-->
+                                            												<#if userinfo.isBindPhone >
+                                                                                            <p>
+                                                                                                已认证
+                                                                                                <a href="#">查看</a>
+                                                                                            </p>
+                                                                                            <#else>
+                                                                                            <p>
+                                                                                                未认证
+                                                                                                <a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>
+                                                                                            </p>
+                                                                                            </#if>
 											</div>
 											<div class="clearfix"></div>
 											<p class="info">可以收到系统操作信息,并增加使用安全性</p>

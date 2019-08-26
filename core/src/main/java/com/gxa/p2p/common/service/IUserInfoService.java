@@ -23,9 +23,12 @@ public interface IUserInfoService {
     void updateUserInfo(Userinfo userinfo);
 
     /**
-     * 用户登录
-     * @param username
-     * @param password
      *
-     * */
+     * 用户绑定手机
+     *
+     * @param phoneNumber
+     * @param verifyCode
+     */
+    void bindPhone(String phoneNumber, String verifyCode);
+
 }

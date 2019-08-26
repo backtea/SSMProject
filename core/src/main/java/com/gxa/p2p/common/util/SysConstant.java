@@ -31,8 +31,16 @@ public class SysConstant {
 	/**
 	 * 定义初始授信额度
 	 */
-	public static final BigDecimal INIT_BORROW_LIMIT = new BigDecimal(
-			"5000.0000");
+	public static final BigDecimal INIT_BORROW_LIMIT = new BigDecimal("5000.0000");
 
+	/**
+	 * 发送手机验证码的时间间隔
+	 */
+	public static final long SEND_VERIFYCODE_INTERVAL  =  30 ; //秒
+
+	/**
+	 * 手机验证码的有效时间
+	 */
+	public static final long VERIFYCODE_VALID_TIME  =  180 ; //秒
 
 }

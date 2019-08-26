@@ -51,6 +51,12 @@ public class Userinfo {
         bitstate = BitStatesUtils.removeState(bitstate, state);
     }
 
+    // 判断是否已经绑定了手机
+    public boolean getIsBindPhone() {
+        return BitStatesUtils.hasState(this.bitstate,
+                BitStatesUtils.OP_BIND_PHONE);
+    }
+
     // 判断用户是否已经填写了基本资料
     public boolean getIsBasicInfo() {
         return BitStatesUtils.hasState(bitstate, BitStatesUtils.OP_USER_INFO);
