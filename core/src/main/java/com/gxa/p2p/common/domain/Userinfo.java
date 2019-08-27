@@ -2,6 +2,8 @@ package com.gxa.p2p.common.domain;
 
 import com.gxa.p2p.common.util.BitStatesUtils;
 
+import static com.gxa.p2p.common.util.SysConstant.CREDIT_BORROW_SCORE;
+
 public class Userinfo {
     private Long id;
 
@@ -41,6 +43,12 @@ public class Userinfo {
 
     private Systemdictionaryitem houseconditionItem;
 
+    public int creditBorrowScore=CREDIT_BORROW_SCORE;
+
+    public int getCreditBorrowScore() {
+        return creditBorrowScore;
+    }
+
     // 添加绑定的状态码
     public void addState(Long state) {
         bitstate = BitStatesUtils.addState(bitstate, state);
@@ -57,6 +65,11 @@ public class Userinfo {
                 BitStatesUtils.OP_BIND_PHONE);
     }
 
+    //    判断用户是否有正在审理中的投标
+    public boolean getIsBindState() {
+        return BitStatesUtils.hasState(this.bitstate,
+                BitStatesUtils.OP_HAS_BIDREQUEST_PROCESS);
+    }
 
     public boolean getIsBindEmail() {
         return BitStatesUtils.hasState(this.bitstate,BitStatesUtils.OP_BIND_EMAIL);

@@ -30,7 +30,7 @@
 		<property name="dataSource" ref="dataSource"/>
 		<property name="configLocation" value="classpath:mybatis-config.xml"/>
 		<!-- domain的位置 -->
-		<property name="typeAliasesPackage" value="com.gxa.p2p.common"/>
+		<property name="typeAliasesPackage" value="com.gxa.p2p"/>
 		<property name="mapperLocations" value="classpath:com/gxa/p2p/*/mapper/*Mapper.xml"/>
 	</bean>
 

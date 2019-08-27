@@ -4,6 +4,9 @@ import com.gxa.p2p.common.util.SysConstant;
 
 import java.math.BigDecimal;
 
+import static com.gxa.p2p.common.util.SysConstant.SMALLEST_BIDREQUEST_AMOUNT;
+import static com.gxa.p2p.common.util.SysConstant.SMALLEST_BID_AMOUNT;
+
 public class Account {
     private Long id;
 
@@ -32,6 +35,20 @@ public class Account {
 
 //剩余额度
     private BigDecimal remainborrowlimit= SysConstant.ZERO;
+
+//    最小借款金额
+    private BigDecimal minBidRequestAmount=SMALLEST_BIDREQUEST_AMOUNT;
+
+//    最小投标金额
+    private BigDecimal minBidAmount=SMALLEST_BID_AMOUNT;
+
+    public BigDecimal getMinBidRequestAmount() {
+        return minBidRequestAmount;
+    }
+
+    public BigDecimal getMinBidAmount() {
+        return minBidAmount;
+    }
 
     public Long getId() {
         return id;
