@@ -57,6 +57,11 @@ public class Userinfo {
                 BitStatesUtils.OP_BIND_PHONE);
     }
 
+
+    public boolean getIsBindEmail() {
+        return BitStatesUtils.hasState(this.bitstate,BitStatesUtils.OP_BIND_EMAIL);
+    }
+
     // 判断用户是否已经填写了基本资料
     public boolean getIsBasicInfo() {
         return BitStatesUtils.hasState(bitstate, BitStatesUtils.OP_USER_INFO);

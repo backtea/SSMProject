@@ -9,7 +9,7 @@
 		<link type="text/css" rel="stylesheet" href="/css/account.css" />
 
 		<script type="text/javascript">
-            //点击马上绑定
+            //手机验证点击马上绑定
             $(function() {
                 $("#showBindPhoneModal").click(function() {
                     $("#bindPhoneModal").modal("show");
@@ -63,7 +63,65 @@
                         }
                     })
                 });
-			});
+
+                //    邮箱验证
+                $("#showBindEmailModal").click(function() {
+                    $("#bindEmailModal").modal("show");
+                });
+
+                //设置提示文字为红色，并隐藏
+                $("#checkEmailReg").hide();
+                $("#checkEmailReg").css("color","red");
+                //默认设置点击按钮不可用，等待合法的邮箱地址
+                $("#bindEmail").enable(false)
+
+                //监听文本框内容改变，即时给出提示
+                $('#email').on('input propertychange', function() {
+
+                    //显示判断内容
+                    $("#checkEmailReg").css("color","red");
+                    $("#checkEmailReg").show();
+                    // 获取文本框的内容
+                    var emailTxt = $('#email').val();
+                    // 邮箱的验证正则：
+                    var reg = /^\w+@(\w+\.)+\w+$/
+
+                    //内容为空时隐藏
+                    if(emailTxt==''){
+                        $("#checkEmailReg").hide();
+                    }
+
+                    if(reg.test(emailTxt)){
+                        $("#checkEmailReg").css("color","green");
+                        $("#checkEmailReg").text("邮箱格式正确")
+                        $("#bindEmail").enable(true)
+                    }else{
+                        $("#checkEmailReg").css("color","red");
+                        $("#checkEmailReg").text("邮箱格式不符合要求")
+                        $("#bindEmail").enable(false)
+                    }
+
+                });
+
+                $("#bindEmail").click(function() {
+                    var email = $('#email').val()
+                    $.ajax({
+                        type : "POST",
+                        url : "/sendEmail.do",
+                        dataType : "json",
+                        data : { //发送到服务器的数据
+                            email : email
+                        },
+                        success : function(data) {
+                            if (data.success) {
+                                window.location.reload(); //刷新当前页面  关闭模式窗
+                            } else {
+                                $.messager.popup(data.msg);
+                            }
+                        }
+                    })
+            });
+            })
 		</script>
 	</head>
 	<body>
@@ -183,9 +241,9 @@
 											</div>
 											<div class="el-accoun-auth-right">
 												<h5>邮箱认证</h5>
-												未绑定
-												<a href="javascript:;" id="showBindEmailModal">去绑定</a>
-<#--												<#if userinfo.isBindEmail>
+												<#--未绑定
+												<a href="javascript:;" id="showBindEmailModal">去绑定</a>-->
+												<#if userinfo.isBindEmail>
 												<p>
 													已绑定
 													<a href="#">查看</a>
@@ -195,7 +253,7 @@
 													未绑定
 													<a href="javascript:;" id="showBindEmailModal">去绑定</a>
 												</p>
-												</#if>-->
+												</#if>
 											</div>
 											<div class="clearfix"></div>
 											<p class="info">您可以设置邮箱来接收重要信息</p>

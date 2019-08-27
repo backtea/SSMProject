@@ -31,4 +31,10 @@ public interface IUserInfoService {
      */
     void bindPhone(String phoneNumber, String verifyCode);
 
+    /**
+     * 绑定邮箱
+     *
+     * @param uuid
+     */
+    void bindEmail(String uuid);
 }

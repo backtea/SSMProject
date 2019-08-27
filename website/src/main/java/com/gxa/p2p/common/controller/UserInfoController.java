@@ -57,4 +57,41 @@ public class UserInfoController {
         return json;
     }
 
+    /**
+     * 用户绑定手机
+     *
+     * @param phoneNumber
+     * @param verifyCode
+     * @return
+     */
+    @RequestMapping("bindPhone")
+    @ResponseBody
+    public JSONResult bindPhone(String phoneNumber, String verifyCode) {
+        JSONResult json = new JSONResult();
+        try {
+            iUserInfoService.bindPhone(phoneNumber, verifyCode);
+        } catch (Exception e) {
+            json.setSuccess(false);
+            json.setMsg(e.getMessage());
+        }
+        return json;
+    }
+
+    /**
+     * 绑定邮件
+     */
+    @RequestMapping("bindEmail")
+    public String bingEmail(String code, Model model) {
+        System.out.println(code);
+        try {
+            iUserInfoService.bindEmail(code);
+            model.addAttribute("success", true);
+        } catch (Exception e) {
+            model.addAttribute("success", false);
+            model.addAttribute("msg", e.getMessage());
+        }
+        return "checkmail_result";
+    }
+
+
 }

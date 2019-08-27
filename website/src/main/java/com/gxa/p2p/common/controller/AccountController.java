@@ -58,25 +58,4 @@ public class AccountController {
         System.out.println(ipLogQueryObject.getBeginDate());
         return "iplog_list";
     }
-
-    /**
-     * 用户绑定手机
-     *
-     * @param phoneNumber
-     * @param verifyCode
-     * @return
-     */
-    @RequestMapping("bindPhone")
-    @ResponseBody
-    public JSONResult bindPhone(String phoneNumber, String verifyCode) {
-        JSONResult json = new JSONResult();
-        try {
-            iUserInfoService.bindPhone(phoneNumber, verifyCode);
-        } catch (Exception e) {
-            json.setSuccess(false);
-            json.setMsg(e.getMessage());
-        }
-        return json;
-    }
-
 }

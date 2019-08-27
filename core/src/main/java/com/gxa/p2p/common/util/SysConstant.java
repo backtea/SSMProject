@@ -43,4 +43,5 @@ public class SysConstant {
 	 */
 	public static final long VERIFYCODE_VALID_TIME  =  180 ; //秒
 
+	public static final long EMAIL_VALID_DAY = 1;
 }
