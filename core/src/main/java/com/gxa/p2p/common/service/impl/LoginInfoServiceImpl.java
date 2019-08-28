@@ -1,5 +1,7 @@
 package com.gxa.p2p.common.service.impl;
 
+import com.gxa.p2p.business.domain.Bidrequest;
+import com.gxa.p2p.business.mapper.BidrequestMapper;
 import com.gxa.p2p.common.domain.Account;
 import com.gxa.p2p.common.domain.Iplog;
 import com.gxa.p2p.common.domain.Logininfo;
@@ -7,6 +9,7 @@ import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.mapper.LogininfoMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
+import com.gxa.p2p.common.query.BidrequestQueryObject;
 import com.gxa.p2p.common.query.LoginInfoQueryObject;
 import com.gxa.p2p.common.query.PageResultSet;
 import com.gxa.p2p.common.service.IAccountService;
@@ -41,6 +44,9 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
 
     @Autowired
     private IIpLogService iIpLogService;
+
+    @Autowired
+    private BidrequestMapper bidrequestMapper;
 
     /**
      * 检查用户名是否已存在
@@ -158,5 +164,23 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
 
         return pageResultSet;
     }
+
+    @Override
+    public PageResultSet queryBidrequestForPage(BidrequestQueryObject bidrequestQueryObject) {
+        int count = bidrequestMapper.queryForCount();
+        PageResultSet pageResultSet;
+        if (count>0){
+            List<Bidrequest> list=bidrequestMapper.queryForPage(bidrequestQueryObject);
+            pageResultSet=new PageResultSet(
+              list,
+              count,
+              bidrequestQueryObject.getCurrentPage(),
+              bidrequestQueryObject.getPageSize());
+        }else {
+            pageResultSet=PageResultSet.empty(bidrequestQueryObject.getPageSize());
+        }
+        return pageResultSet;
+    }
+
 
 }

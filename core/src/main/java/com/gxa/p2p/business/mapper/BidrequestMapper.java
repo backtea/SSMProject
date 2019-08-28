@@ -1,6 +1,7 @@
 package com.gxa.p2p.business.mapper;
 
 import com.gxa.p2p.business.domain.Bidrequest;
+import com.gxa.p2p.common.query.BidrequestQueryObject;
 
 import java.util.List;
 
@@ -16,4 +17,7 @@ public interface BidrequestMapper {
     int selectState(Bidrequest bidrequest);
 
     int updateByPrimaryKey(Bidrequest record);
+
+    int queryForCount();
+    List<Bidrequest> queryForPage(BidrequestQueryObject bidrequestQueryObject);
 }

@@ -23,7 +23,6 @@ public class UserListController {
     @RequestMapping("user_list")
     public String userList(LoginInfoQueryObject loginInfoQueryObject, Model model) {
         model.addAttribute("pageResultSet",iLoginInfoService.queryForPage(loginInfoQueryObject));
-        System.out.println(iLoginInfoService.queryForPage(loginInfoQueryObject).getListData().get(0).toString());
         return "user/list";
     }
 

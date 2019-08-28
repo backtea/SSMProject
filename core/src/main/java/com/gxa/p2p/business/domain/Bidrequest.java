@@ -2,7 +2,6 @@ package com.gxa.p2p.business.domain;
 
 import com.alibaba.fastjson.JSONObject;
 import com.gxa.p2p.common.domain.Logininfo;
-import com.gxa.p2p.common.util.BitStatesUtils;
 import com.gxa.p2p.common.util.SysConstant;
 import com.gxa.p2p.common.util.UserContext;
 
@@ -16,7 +15,7 @@ public class Bidrequest {
     private Long id;
     private Integer version = 1;//对象版本信息（用作乐观锁）
     private Byte bidrequesttype = SysConstant.BIDREQUEST_TYPE_NORMAL;//借款类型，在我们项目中，就是信用借款
-    private Long bidrequeststate = 1l;//标的的状态，因为标的在一个时间只可能处于一种状态
+    private int bidrequeststate = 1;//标的的状态，因为标的在一个时间只可能处于一种状态
     private BigDecimal bidrequestamount;//这个借款的金额
     private BigDecimal currentrate;//这个借款的利率
     private Byte monthes2return;//借款期限，就是这个借款的还款时间，单位是月，一般可供1~18选择
@@ -48,6 +47,36 @@ public class Bidrequest {
         json.put("totalRewardAmount", totalrewardamount);
         return JSONObject.toJSONString(json);
     }
+
+//    获取借款状态
+public String getBidRequestStateDisplay() {
+    switch (bidrequeststate) {
+        case SysConstant.BIDREQUEST_STATE_PUBLISH_PENDING:
+            return "待发布";
+        case SysConstant.BIDREQUEST_STATE_BIDDING:
+            return "招标中";
+        case SysConstant.BIDREQUEST_STATE_UNDO:
+            return "已撤销";
+        case SysConstant.BIDREQUEST_STATE_BIDDING_OVERDUE:
+            return "流标";
+        case SysConstant.BIDREQUEST_STATE_APPROVE_PENDING_1:
+            return "满标一审";
+        case SysConstant.BIDREQUEST_STATE_APPROVE_PENDING_2:
+            return "满标二审";
+        case SysConstant.BIDREQUEST_STATE_REJECTED:
+            return "满标审核被拒";
+        case SysConstant.BIDREQUEST_STATE_PAYING_BACK:
+            return "还款中";
+        case SysConstant.BIDREQUEST_STATE_COMPLETE_PAY_BACK:
+            return "完成";
+        case SysConstant.BIDREQUEST_STATE_PAY_BACK_OVERDUE:
+            return "逾期";
+        case SysConstant.BIDREQUEST_STATE_PUBLISH_REFUSE:
+            return "发标拒绝";
+        default:
+            return "";
+    }
+}
 
     public Logininfo getCreateUser() {
         return createUser;
@@ -81,11 +110,11 @@ public class Bidrequest {
         this.bidrequesttype = bidrequesttype;
     }
 
-    public Long getBidrequeststate() {
+    public int getBidrequeststate() {
         return bidrequeststate;
     }
 
-    public void setBidrequeststate(Long bidrequeststate) {
+    public void setBidrequeststate(int bidrequeststate) {
         this.bidrequeststate = bidrequeststate;
     }
 

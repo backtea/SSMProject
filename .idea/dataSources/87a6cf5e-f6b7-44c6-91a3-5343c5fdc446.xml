@@ -1021,7 +1021,7 @@
     </column>
     <column id="252" parent="230" name="bidRequestState">
       <Position>4</Position>
-      <DataType>bigint(4)|0s</DataType>
+      <DataType>int(4)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

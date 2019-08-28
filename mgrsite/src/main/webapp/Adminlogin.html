@@ -28,17 +28,6 @@
 
     <script type="text/javascript">
         $(function () {
-            // $("#loginForm").ajaxForm({
-            // 	success:function(data){
-            // 		if(data.success){
-            // 			$.messager.confirm("提示","登陆成功,点击确定进入个人中心",function(){
-            // 				window.location.href="/personal.do";
-            // 			});
-            // 		}else{
-            // 			$.messager.popup(data.msg)
-            // 		}
-            // 	}
-            // });
             $("#loginForm").validate({
                 rules: {
                     username: {
@@ -86,7 +75,7 @@
     <div class="container" style="position: relative;">
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/">首页</a></li>
-            <li><a href="/login.html">登录</a></li>
+            <li><a href="/Adminlogin.html">登录</a></li>
             <li><a href="#">帮助</a></li>
         </ul>
     </div>
@@ -122,8 +111,8 @@
                 <button type="submit" class="btn btn-success" style="width: 100px;">
                     登录
                 </button>
-                &emsp;&emsp;
-                <a href="/register.html">新用户，马上注册</a>
+                <!--&emsp;&emsp;
+                <a href="/register.html">新用户，马上注册</a>-->
             </div>
         </div>
     </form>

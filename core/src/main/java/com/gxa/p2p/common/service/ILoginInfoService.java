@@ -1,6 +1,7 @@
 package com.gxa.p2p.common.service;
 
 import com.gxa.p2p.common.domain.Logininfo;
+import com.gxa.p2p.common.query.BidrequestQueryObject;
 import com.gxa.p2p.common.query.LoginInfoQueryObject;
 import com.gxa.p2p.common.query.PageResultSet;
 
@@ -28,6 +29,7 @@ public interface ILoginInfoService {
      */
     PageResultSet queryForPage(LoginInfoQueryObject loginInfoQueryObject);
 
+    PageResultSet queryBidrequestForPage(BidrequestQueryObject bidrequestQueryObject);
 
 
 }
