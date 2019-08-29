@@ -86,12 +86,14 @@
     <select id="queryForCount" resultType="int">
     select count(id)
     from `bidrequest`
+    where version=#{versionState}
   </select>
     <select id="queryForPage" resultMap="BaseResultMap">
     SELECT id, version, bidRequestType, bidRequestState, bidRequestAmount, currentRate,
     monthes2Return, bidCount, totalRewardAmount, currentSum, title, description, note,
     disableDate, createuser_id, disableDays, minBidAmount, applyTime, publishTime, returnType
     FROM `bidrequest`
+    where version=#{versionState}
     ORDER BY applyTime ASC
     LIMIT #{start},#{pageSize}
   </select>

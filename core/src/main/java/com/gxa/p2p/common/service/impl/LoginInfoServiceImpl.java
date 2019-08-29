@@ -165,9 +165,12 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
         return pageResultSet;
     }
 
+    /**
+     * 投标信息分页查询
+     * */
     @Override
     public PageResultSet queryBidrequestForPage(BidrequestQueryObject bidrequestQueryObject) {
-        int count = bidrequestMapper.queryForCount();
+        int count = bidrequestMapper.queryForCount(bidrequestQueryObject);
         PageResultSet pageResultSet;
         if (count>0){
             List<Bidrequest> list=bidrequestMapper.queryForPage(bidrequestQueryObject);

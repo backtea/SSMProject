@@ -1132,7 +1132,7 @@
     </column>
     <column id="271" parent="231" name="state">
       <Position>2</Position>
-      <DataType>tinyint(4)|0s</DataType>
+      <DataType>int(4)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1171,7 +1171,7 @@
     </column>
     <column id="278" parent="231" name="auditType">
       <Position>9</Position>
-      <DataType>tinyint(4)|0s</DataType>
+      <DataType>int(4)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

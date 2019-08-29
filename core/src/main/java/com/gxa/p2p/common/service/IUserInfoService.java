@@ -37,4 +37,9 @@ public interface IUserInfoService {
      * @param uuid
      */
     void bindEmail(String uuid);
+
+    /**
+     * 修改用户状态码
+     *
+     * */
 }

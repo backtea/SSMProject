@@ -29,6 +29,7 @@ public class IBidrequestServiceImpl implements IBidrequestService {
             userInfo.addState(BitStatesUtils.OP_HAS_BIDREQUEST_PROCESS);
             iUserInfoService.updateUserInfo(userInfo);
             bidrequest.setApplytime(new Date());
+            bidrequest.setCreateuserId(UserContext.getLoginInfo().getId());
             bidrequest.setDisabledate(bidrequest.getApplytime());
             bidrequestMapper.insert(bidrequest);
             bidState=true;

@@ -33,7 +33,6 @@ public class Bidrequest {
     private Date publishtime;//发标时间
     private Byte returntype;
     private Logininfo createUser;//借款人
-    Logininfo loginInfoToid = UserContext.getLoginInfo();
 
     public String getJsonString() {
         Map<String, Object> json = new HashMap<>();
@@ -199,7 +198,7 @@ public String getBidRequestStateDisplay() {
     }
 
     public Long getCreateuserId() {
-        return loginInfoToid.getId();
+        return createuserId;
     }
 
     public void setCreateuserId(Long createuserId) {

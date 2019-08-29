@@ -36,7 +36,7 @@
         targetPackage     指定生成的model生成所在的包名
         targetProject     指定在该项目下所在的路径
         如果目录不存在，MBG不会自动建目录 -->
-        <javaModelGenerator targetPackage="com.gxa.p2p.common.domain"
+        <javaModelGenerator targetPackage="com.gxa.p2p.business.domain"
                             targetProject="src/main/java">
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
             <property name="enableSubPackages" value="false"/>
@@ -49,7 +49,7 @@
         </javaModelGenerator>
 
         <!-- 生成SQL map的XML文件生成器， 注意，在Mybatis3之后，我们可以使用mapper.xml文件+Mapper接口 -->
-        <sqlMapGenerator targetPackage="com.gxa.p2p.common.mapper"
+        <sqlMapGenerator targetPackage="com.gxa.p2p.business.mapper"
                          targetProject="src/main/java">
             <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
             <property name="enableSubPackages" value="true"/>
@@ -62,7 +62,7 @@
         type="MIXEDMAPPER",生成基于注解的Java Model和相应的Mapper对象
         type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
         注意，如果context是MyBatis3Simple：只支持ANNOTATEDMAPPER和XMLMAPPER -->
-        <javaClientGenerator targetPackage="com.gxa.p2p.common.mapper"
+        <javaClientGenerator targetPackage="com.gxa.p2p.business.mapper"
                              targetProject="src/main/java"
                              type="XMLMAPPER">
             <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
@@ -73,7 +73,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="bidrequest" delimitIdentifiers="true">
+        <table tableName="bidrequestaudithistory" delimitIdentifiers="true">
             <!-- 参考 javaModelGenerator 的 constructorBased属性 -->
             <property name="constructorBased" value="false"/>
             <generatedKey column="id" sqlStatement="JDBC"/>
