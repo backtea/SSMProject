@@ -2,10 +2,10 @@ package com.gxa.p2p.business.domain;
 
 import com.alibaba.fastjson.JSONObject;
 import com.gxa.p2p.common.domain.Logininfo;
+import com.gxa.p2p.common.util.CalendarUtil;
 import com.gxa.p2p.common.util.SysConstant;
-import com.gxa.p2p.common.util.UserContext;
-
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -31,8 +31,26 @@ public class Bidrequest {
     private BigDecimal minbidamount;//这个借款允许的最小的投标金额，默认是50；
     private Date applytime;//招标申请日期
     private Date publishtime;//发标时间
-    private Byte returntype;
+    private Byte returntype;//还款方式
     private Logininfo createUser;//借款人
+    private BigDecimal currentSum = SysConstant.ZERO;// 当前已投标总金额
+
+    private CalendarUtil calendarUtil;
+
+    //获取标的进度条
+    public BigDecimal getPersent() {
+        return currentSum.divide(bidrequestamount, SysConstant.DISPLAY_SCALE, RoundingMode.HALF_UP);
+    }
+
+    //获取剩余还未投满的金额 (+:add  -:subtract  *:multiply  /:divide)
+    public BigDecimal getRemainAmount() {
+        return bidrequestamount.subtract(currentSum);
+    }
+
+    //获取还款方式
+    public String getReturnTypeDisplay() {
+        return returntype == SysConstant.RETURN_TYPE_MONTH_INTEREST ? "按月到期" : "等额本息";
+    }
 
     public String getJsonString() {
         Map<String, Object> json = new HashMap<>();
@@ -42,7 +60,7 @@ public class Bidrequest {
         json.put("bidRequestAmount", bidrequestamount);
         json.put("currentRate", currentrate);
         json.put("monthes2Return", monthes2return);
-        json.put("returnType", getReturntype());
+        json.put("returnType", getReturnTypeDisplay());
         json.put("totalRewardAmount", totalrewardamount);
         return JSONObject.toJSONString(json);
     }

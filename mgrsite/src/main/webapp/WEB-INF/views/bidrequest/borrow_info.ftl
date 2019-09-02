@@ -27,7 +27,7 @@
 			$(function(){
 				$("#retroclockbox").flipcountdown({
 					size:'xs',
-					beforeDateTime:"${(bidRequest.disableDate?string('yyyy-MM-dd HH:mm:ss'))!''}"
+					beforeDateTime:"${(bidRequest.disabledate?string('yyyy-MM-dd HH:mm:ss'))!''}"
 				});
 			});
 		</script>
@@ -79,21 +79,21 @@
 									<tr>
 										<td class="muted" width="80px">借款金额</td>
 										<td class="text-info" width="120px" style="padding-left: 10px;">
-											${bidRequest.bidRequestAmount}
+											${bidRequest.bidrequestamount}
 										</td>
 										<td class="muted" width="80px">年化利率</td>
 										<td class="text-info" style="padding-left: 10px;">
-											${bidRequest.currentRate}%
+											${bidRequest.currentrate}%
 										</td>
 									</tr>
 									<tr>
 										<td class="muted ">借款期限</td>
 										<td class="text-info" style="padding-left: 10px;">
-											${bidRequest.monthes2Return}月
+											${bidRequest.monthes2return}月
 										</td>
 										<td class="muted">总可得利息</td>
 										<td class="text-info" style="padding-left: 10px;">
-											${bidRequest.totalRewardAmount}
+											${bidRequest.totalrewardamount}
 										</td>
 									</tr>
 									<tr>
@@ -103,7 +103,7 @@
 										</td>
 										<td class="muted">最小投标</td>
 										<td class="text-info" style="padding-left: 10px;">
-											${bidRequest.minBidAmount}
+											${bidRequest.minbidamount}
 										</td>
 									</tr>
 									<tr>
@@ -125,7 +125,7 @@
 							<table style="height:110px;width:230px;">
 								<tr>
 									<td  class="muted">投标总数</td><td class="text-info" style="padding-left: 10px;">
-										${bidRequest.bidCount}
+										${bidRequest.bidcount}
 									</td>
 								</tr>
 								<tr>
@@ -144,17 +144,17 @@
 									</td>
 								</tr>
 							</table>
-							
-							<#if bidRequest.bidRequestState==1>
+
+							<#if bidRequest.bidrequeststate==1>
 								<br />
 								<a class="btn btn-danger btn-block" style="font-size: 18px;" href="#">
 									投标中
 								</a>
-							<#elseif bidRequest.bidRequestState==4 || bidRequest.bidRequestState==5>
+							<#elseif bidRequest.bidrequeststate==4 || bidRequest.bidrequeststate==5>
 								<h4 class="text-primary">满标审核中</h4>
-							<#elseif bidRequest.bidRequestState==7>
+							<#elseif bidRequest.bidrequeststate==7>
 								<h4 class="text-primary">还款中</h4>
-							<#elseif bidRequest.bidRequestState==8>
+							<#elseif bidRequest.bidrequeststate==8>
 								<h4 class="text-primary">已还清</h4>
 							</#if>
 						</div>
@@ -175,14 +175,14 @@
 									</tr>
 								</thead>
 								<tbody>
-									<#list audits as audit>
+									<#--<#list audits as audit>-->
 							    	<tr style="cursor: pointer;" lid="2101" st="1" class="more">
-								        <td>${audit.auditTypeDisplay}</td>
-								        <td>${audit.auditTime?string("yyyy-MM-dd HH:mm:SS")}</td>
-								        <td>${audit.auditor.username}</td>
-								        <td>${audit.remark}</td>
+								        <td><#--${audit.auditTypeDisplay}--></td>
+								        <td><#--${audit.audittime?string("yyyy-MM-dd HH:mm:SS")}--></td>
+								        <td><#--${audit.auditor.username}--></td>
+								        <td><#--${audit.remark}--></td>
 								    </tr>
-									</#list>
+									<#--</#list>-->
 								</tbody>
 							</table>
 						</div>
@@ -216,11 +216,11 @@
 									<tr>
 										<td class="muted text-right" width="140px;">注册时间</td>
 										<td width="150px;" style="padding-left: 10px;" class="text-info">
-											
+
 										</td>
 										<td class="muted text-right" width="140px;">借款额度</td>
 										<td width="150px;" style="padding-left: 10px;" class="text-info">
-											${bidRequest.bidRequestAmount}
+											${bidRequest.bidrequestamount}
 										</td>
 										<td class="muted text-right" width="140px;">住房条件</td>
 										<td width="150px;" style="padding-left: 10px;" class="text-info">

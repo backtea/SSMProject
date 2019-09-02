@@ -1,7 +1,11 @@
 package com.gxa.p2p.admin.controller;
 
+import com.gxa.p2p.business.domain.Bidrequest;
 import com.gxa.p2p.business.domain.Bidrequestaudithistory;
+import com.gxa.p2p.business.mapper.BidrequestMapper;
 import com.gxa.p2p.business.service.IBidrequestaudithistoryService;
+import com.gxa.p2p.common.domain.Userinfo;
+import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.query.BidrequestQueryObject;
 import com.gxa.p2p.common.service.ILoginInfoService;
 import com.gxa.p2p.common.util.JSONResult;
@@ -19,6 +23,12 @@ public class BidRequestController {
 
     @Autowired
     private IBidrequestaudithistoryService iBidrequestaudithistoryService;
+
+    @Autowired
+    private BidrequestMapper bidrequestMapper;
+
+    @Autowired
+    private UserinfoMapper userinfoMapper;
 
     /**
      * 显示未评审的借款标
@@ -46,5 +56,17 @@ public class BidRequestController {
             jsonResult.setMsg(re.getMessage());
         }
         return jsonResult;
+    }
+
+    /**
+     * 查看借标详细信息
+     * */
+    @RequestMapping("borrow_info")
+    public String borrowinfo(Long id,Model model){
+        Bidrequest bidrequest=bidrequestMapper.selectByPrimaryKey(id);
+        model.addAttribute("bidRequest",bidrequest);
+        Userinfo userinfo=userinfoMapper.selectByPrimaryKey(bidrequest.getCreateuserId());
+        model.addAttribute("userInfo",userinfo);
+        return "bidrequest/borrow_info";
     }
 }

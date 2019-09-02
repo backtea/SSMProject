@@ -2,13 +2,16 @@ package com.gxa.p2p.business.service.impl;
 import com.gxa.p2p.business.domain.Bidrequest;
 import com.gxa.p2p.business.mapper.BidrequestMapper;
 import com.gxa.p2p.business.service.IBidrequestService;
+import com.gxa.p2p.business.util.CalculatetUtil;
 import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.service.IUserInfoService;
 import com.gxa.p2p.common.util.BitStatesUtils;
+import com.gxa.p2p.common.util.CalendarUtil;
 import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.xml.crypto.Data;
 import java.util.Date;
 
 @Service
@@ -30,7 +33,8 @@ public class IBidrequestServiceImpl implements IBidrequestService {
             iUserInfoService.updateUserInfo(userInfo);
             bidrequest.setApplytime(new Date());
             bidrequest.setCreateuserId(UserContext.getLoginInfo().getId());
-            bidrequest.setDisabledate(bidrequest.getApplytime());
+            CalendarUtil.getDate(bidrequest.getApplytime(),bidrequest.getDisabledays());
+            bidrequest.setDisabledate(CalendarUtil.getDate(bidrequest.getApplytime(),bidrequest.getDisabledays()));
             bidrequestMapper.insert(bidrequest);
             bidState=true;
         }

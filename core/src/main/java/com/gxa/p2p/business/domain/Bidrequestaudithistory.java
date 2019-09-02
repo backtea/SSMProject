@@ -1,8 +1,15 @@
 package com.gxa.p2p.business.domain;
 
+import com.gxa.p2p.common.domain.Logininfo;
+
 import java.util.Date;
 
-public class Bidrequestaudithistory {
+public class Bidrequestaudithistory{
+
+    public static final int PUBLISH_AUDIT = 0; //发标审核
+    public static final int FULL_AUDIT1 = 1; //满标一审
+    public static final int FULL_AUDIT2 = 2; //满标二审
+
     private Long id;
 
     private Integer state;/*审核是否成功的状态，1为成功，2为失败，0为没有操作*/
@@ -20,6 +27,30 @@ public class Bidrequestaudithistory {
     private Long bidrequestid;/*审评单id*/
 
     private Integer audittype;/*招标审评是否成功，如果成功则为1，失败则为10*/
+
+    private Logininfo auditor;
+    public Logininfo getAuditor() {
+        return auditor;
+    }
+
+    public void setAuditor(Logininfo auditor) {
+        this.auditor = auditor;
+    }
+
+
+
+    public String getAuditTypeDisplay() {
+        switch (this.audittype) {
+            case PUBLISH_AUDIT:
+                return "发标审核";
+            case FULL_AUDIT1:
+                return "满标一审";
+            case FULL_AUDIT2:
+                return "满标二审";
+            default:
+                return "";
+        }
+    }
 
     public Long getId() {
         return id;
